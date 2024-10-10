@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  height: 100vh;
+  background: url(assets/tableBg) center / cover ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table{
+  height: 91vh;
+  width: 81vw;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.taableHeader{
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.taableHeader > h1{
+  border-bottom: 3px solid black;
+}
+
+.tableBody{
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+  overflow: auto;
+  overflow: overlay;
+}
+
+.tableBody::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.tableBody:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
+}
+
+table{
+  width: 100%;
+}
+
+table,th {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: center;
+}
+
+td{
+  border-collapse: collapse;
+  padding: 1rem;
+  height: 100%;
+  text-align: center;
+}
+
+thead, th{
+  position: static;
+  top: 0;
+  left: 0;
+  background: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even){
+  background-color: #0000000b;
+}
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+img{
+  height: 150px;
+  width: 100px;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+tbody tr td:nth-child(2){
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 6px;
+  position: relative;
+}
+
+tbody tr td:nth-child(4){
+  text-align: justify;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: .2s ease-in-out .5s;
+}
+
+.status {
+  padding: .4rem 0.8rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.status.complete {
+  background-color: #86e49d;
+  color: #006b21;
+}
+
+.status.pending {
+  background-color: #ebc474;
+}
+
+.amount{
+  font-weight: 700;
+}
+.title{
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px){
+  td:not(:first-of-type){
+    min-width: 12.1rem;
+  }
+
+}
